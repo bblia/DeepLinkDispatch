@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 apply plugin: 'checkstyle'
 
 checkstyle {
@@ -35,8 +36,12 @@ dependencies {
   testImplementation deps.roboelectric
   testImplementation deps.roboelectricShadowSupport
   testImplementation deps.junit
+  compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 tasks.withType(JavaCompile) {
   options.compilerArgs << "-AdeepLinkDoc.output=${buildDir}/doc/deeplinks.txt"
+}
+repositories {
+  mavenCentral()
 }
