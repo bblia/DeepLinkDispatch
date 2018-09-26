@@ -1,5 +1,5 @@
 def versions = [
-    kotlinVersion                : '1.2.51',
+    kotlinVersion                : '1.2.71',
     androixVersion               : '1.0.0',
     roboelectricVersion          : '3.5',
 ]
